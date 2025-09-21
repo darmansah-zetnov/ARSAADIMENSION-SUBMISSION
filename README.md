@@ -45,7 +45,13 @@ Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebag
 • Endpoint **analytics** Menyediakan statistik interaksi AI.  
 • Endpoint **feedback** Menyimpan rating dan komentar pengguna terhadap hasil AI.
 
-Semua dependensi di requirements.txt diinstall agar running (FastAPI, httpx, OpenCV, NumPy, python dotenv, uvicorn).
+# Semua dependensi di requirements.txt diinstall agar running (FastAPI, httpx, OpenCV, NumPy, python dotenv, uvicorn).
+
+# Saat dijalankan di Laptop/PC lokal default uvicorn menggunakan host 0.0.0.0 atau 127.0.0.1.
+
+# Jika mau diakses dari HP server harus:
+• Memakai host 0.0.0.0.
+• Port 8000 dibuka di firewall/router.
 
 ---
 
