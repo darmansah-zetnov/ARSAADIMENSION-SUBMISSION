@@ -1,128 +1,121 @@
-## PROTOTYPE ARSAA V1
+# PROTOTYPE ARSAA DIMENSION V1
 
-This is a code bundle for PROTOTYPE ARSAA V1. The original project is available at 
+**ARSAA DIMENSION** adalah prototipe platform real estate yang menghubungkan **agen, pengembang, investor, dan pembeli**. Platform ini memanfaatkan:
+• **AI** untuk analisis cerdas dan rekomendasi properti,
+• **AR/VR** untuk visualisasi properti interaktif,  
+• **Web3** untuk transparansi transaksi.  
 
-https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=1
+Prototipe ini masih dalam pengembangan; beberapa fitur lanjutan seperti AR/VR dan integrasi Web3 akan diselesaikan di fase berikutnya.
 
-**ARSAA DIMENSION** Prototype platform real estate yang menghubungkan agen, developer, investor dan pembeli. Menggunakan **AI** untuk analisis cerdas, **AR/VR** untuk visualisasi dan **Web3** untuk transaksi transparan.
-
-Beberapa fitur lanjutan di prototype web termasuk **AR/VR untuk survei properti interaktif** dan **integrasi Web3 untuk transparansi transaksi**, masih dalam pengembangan dan akan diselesaikan pada fase berikutnya.
-
-Running AI melalui terminal code untuk intall backend, Prototype figma sudah terintegrasi dengan API Key Gemini dan bersifat sementara nantinya akan di update kembali.
-
----
-
-# ARSAA DIMENSION - Backend Overview
-
-Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebagai inti dari ekosistem AI & properti yang menggabungkan analisis gambar, geolokasi, dan generative AI. Backend ini menyediakan endpoint untuk query AI, feedback, analisis gambar dan geolokasi properti.
-
-## **Fitur Utama**
-
-### 1. AI Text Generation
-• **BytePlus AI**  
-  Model utama untuk menjawab pertanyaan terkait properti atau memberikan rekomendasi.  
-• **Gemini AI (Google Generative AI)**  
-  Digunakan sebagai fallback ketika BytePlus tidak tersedia atau gagal.  
-• **Stable Diffusion** (opsional)  
-  Digunakan untuk generate gambar atau visual aset properti berbasis AI.
-
-### 2. Analisis & Referensi Gambar Properti
-• **OpenCV + NumPy**  
-  Digunakan untuk membaca dan menganalisis gambar properti, termasuk dimensi dan channel warna.
-• **Unsplash API**  
-  Bisa digunakan untuk mengambil referensi gambar properti dari sumber online.
-
-### 3. Geolokasi Properti
-• **OpenStreetMap (OSM)**  
-  Mengubah alamat properti menjadi koordinat latitude dan longitude untuk integrasi peta atau lokasi.
-
-### 4. Data & Analisis Pasar
-• **NewsAPI**  
-  Menyediakan konteks berita atau informasi pasar properti yang relevan untuk analisis tambahan.
-
-### 5. Monitoring & Feedback
-• Endpoint **health** Memeriksa status sistem dan ketersediaan AI.  
-• Endpoint **analytics** Menyediakan statistik interaksi AI.  
-• Endpoint **feedback** Menyimpan rating dan komentar pengguna terhadap hasil AI.
-
-Semua dependensi di requirements.txt diinstall agar running (FastAPI, httpx, OpenCV, NumPy, python dotenv, uvicorn).
-
-Saat dijalankan di Laptop/PC lokal default uvicorn menggunakan host 0.0.0.0 atau 127.0.0.1.
-
-Jika mau diakses dari HP server harus:
-• Memakai host 0.0.0.0.
-• Port 8000 dibuka di firewall/router.
+[🔗 Prototype Figma ARSAA V1](https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=1)
 
 ---
 
-## Backend Setup (Python + FastAPI)
+## Backend Overview
 
-1. Masuk ke folder backend:
+Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebagai inti dari ekosistem AI & properti. Backend menyediakan endpoint untuk:
+• **Query AI** (analisis dan rekomendasi properti),
+• **Feedback pengguna**,
+• **Analisis gambar properti**,
+• **Geolokasi properti**.  
 
-cd backend
+### Fitur Utama
 
-2. Install dependencies:
+#### 1. AI Text Generation
+• **BytePlus AI** model utama untuk menjawab pertanyaan properti.  
+• **Gemini AI (Google Generative AI)** fallback jika BytePlus gagal.  
+• **Stable Diffusion (opsional)** generate visual aset properti berbasis AI.  
+
+#### 2. Analisis & Referensi Gambar Properti
+• **OpenCV + NumPy** membaca dan menganalisis gambar (dimensi, channel warna).  
+- **Unsplash API** mengambil referensi gambar properti online (opsional).  
+
+#### 3. Geolokasi Properti
+• **OpenStreetMap (OSM)** mengubah alamat properti menjadi koordinat latitude & longitude.  
+
+#### 4. Data & Analisis Pasar
+• **NewsAPI** memberikan konteks berita atau informasi pasar properti untuk analisis tambahan.  
+
+#### 5. Pemantauan & Feedback
+- **Health endpoint** `/api/arsaa/health` memeriksa status backend dan AI.  
+- **Analytics endpoint** `/api/arsaa/analytics` menampilkan statistik interaksi AI.  
+- **Feedback endpoint** `/api/arsaa/feedback` menyimpan rating dan komentar pengguna.  
+
+---
+
+## Cara Menjalankan Backend (PC / Laptop / Mac)
+
+### 1. Persiapan
+• Pastikan **Python 3.10+** sudah terinstal.
+• Clone repository ARSAA DIMENSION.
+• Masuk ke folder backend:
+
+cd ARSAA-DIMENSION/backend
+
+2. Buat Virtual Environment (opsional)
+
+python -m venv venv
+
+Aktifkan venv:
+
+Windows: venv\Scripts\activate
+
+Mac/Linux: source venv/bin/activate
+
+3. Instal Dependensi
 
 pip install -r requirements.txt
 
-3. Setup environment:
+Pastikan semua API key (BytePlus, Gemini, Stable Diffusion, Unsplash, NewsAPI) valid.
 
-cp .env.example .env
+5. Jalankan Backend
 
-Edit .env → masukkan API key dan konfigurasi lain
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
 
-4. Jalankan backend:
+Backend akan berjalan di http://127.0.0.1:8000
 
-uvicorn main:app --reload --port 8000
+Endpoint test:
 
-Backend berjalan di http://127.0.0.1:8000
+Health check: http://127.0.0.1:8000/api/arsaa/health
 
-Test endpoint:
+Analytics: http://127.0.0.1:8000/api/arsaa/analytics
 
-curl http://127.0.0.1:8000/api/health
+> Catatan: Host 0.0.0.0 memungkinkan akses dari perangkat lain di jaringan lokal.
 
----
+Cara Menjalankan Frontend (Node + Vite)
 
-## Frontend Setup (Node + Vite)
+1. Masuk Folder Frontend (Figma)
 
-1. Kembali ke folder utama:
+cd ARSAA-DIMENSION
 
-cd ..
-
-2. Install dependency frontend:
+2. Instal Dependensi Frontend
 
 npm install
 
-3. Jalankan development server:
+3. Jalankan Development Server
 
 npm run dev
 
-Buka browser biasanya port 5173
+Biasanya frontend berjalan di http://localhost:5173
 
-Pastikan frontend bisa request ke backend (http://127.0.0.1:8000)
+Pastikan frontend bisa melakukan request ke backend http://127.0.0.1:8000
+
+## Catatan
+
+Prototipe ini dikembangkan dan diuji di HP dengan Termux, Figma & Firefox mode desktop.
+
+Backend sudah mendukung AI, analisis gambar dan geolokasi, tapi fitur prototype figma AR/VR dan Web3 masih dalam pengembangan.
+
+Disarankan menjalankan backend sebelum frontend agar request API berjalan tanpa error.
 
 ---
 
-## Menjalankan Project di Semua Device
+Summary
 
-1. PC / Laptop / VS Code / Editor Lain
+Backend ARSAA DIMENSION adalah AI untuk platform real estate nantinya.
 
-Buka project di editor terminal editor bisa pakai semua perintah backend dan frontend di atas.
+Menangani query AI, feedback, analisis gambar, geolokasi.
 
-Backend jalan di http://127.0.0.1:8000
+Siap dijalankan di PC, Laptop, atau Mac dengan Python & FastAPI.
 
-Frontend jalan di http://localhost:5173
-
-2. HP (Termux)
-
-Masuk folder project, buat venv (opsional) :
-
-python -m venv venv
-source venv/bin/activate
-
-Install dependencies backend + frontend, jalankan sama seperti di PC
-
-Buka browser HP untuk frontend
-
-## **Catatan Pengembangan:**
-Project ini dikembangkan menggunakan **HP dengan Termux, Figma & Firefox mode dekstop** sebagai lingkungan pengembangan utama. Seluruh backend (FastAPI) dan frontend (Vite/Node) dibangun dan diuji di perangkat mobile.
+Frontend Vite/Node akan terhubung langsung ke backend untuk demo interaktif.
