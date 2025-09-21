@@ -1,0 +1,37 @@
+# Python & Backend
+# Virtual environment
+venv/
+
+# Environment variables
+backend/.env
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+backend/*.db
+
+# Logs
+*.log
+
+# Node modules
+frontend/node_modules/
+*.log
+
+# Build / dist
+frontend/dist/
+frontend/build/
+*.tsbuildinfo
+
+# Editor settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
