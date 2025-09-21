@@ -1,8 +1,8 @@
+## PROTOTYPE ARSAA V1
 
-  # PROTOTYPE ARSAA V1
+This is a code bundle for PROTOTYPE ARSAA V1. The original project is available at https://www.figma.com/design/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1.
 
-  This is a code bundle for PROTOTYPE ARSAA V1. The original project is available at https://www.figma.com/design/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1.
-
+https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=1
 
 **ARSAA DIMENSION** Prototype platform real estate yang menghubungkan agen, developer, investor dan pembeli. Menggunakan **AI** untuk analisis cerdas, **AR/VR** untuk visualisasi dan **Web3** untuk transaksi transparan.
 
@@ -77,5 +77,5 @@ Install dependencies backend + frontend, jalankan sama seperti di PC
 
 Buka browser HP untuk frontend
 
-**Catatan Pengembangan:**
-Project ini dikembangkan menggunakan **HP Android dengan Termux & Firefox mode dekstop** sebagai lingkungan pengembangan utama. Seluruh backend (FastAPI) dan frontend (Vite/Node) dibangun dan diuji di perangkat mobile tanpa menggunakan PC/Laptop.
+## **Catatan Pengembangan:**
+Project ini dikembangkan menggunakan **HP dengan Termux, Figma & Firefox mode dekstop** sebagai lingkungan pengembangan utama. Seluruh backend (FastAPI) dan frontend (Vite/Node) dibangun dan diuji di perangkat mobile.
