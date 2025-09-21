@@ -8,7 +8,7 @@ https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=
 
 Beberapa fitur lanjutan di prototype web termasuk **AR/VR untuk survei properti interaktif** dan **integrasi Web3 untuk transparansi transaksi**, masih dalam pengembangan dan akan diselesaikan pada fase berikutnya.
 
-Running AI melalui terminal code intall backend, Prototype figma sudah terintegrasi dengan API Key Gemini dan bersifat sementara nantinya akan di update kembali.
+Running AI melalui terminal code untuk intall backend, Prototype figma sudah terintegrasi dengan API Key Gemini dan bersifat sementara nantinya akan di update kembali.
 
 ---
 
