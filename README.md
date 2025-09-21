@@ -1,6 +1,6 @@
 ## PROTOTYPE ARSAA V1
 
-This is a code bundle for PROTOTYPE ARSAA V1. The original project is available at https://www.figma.com/design/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1
+This is a code bundle for PROTOTYPE ARSAA V1. The original project is available at 
 
 https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=1
 
