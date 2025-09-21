@@ -12,6 +12,41 @@ Running AI melalui terminal code untuk intall backend, Prototype figma sudah ter
 
 ---
 
+# ARSAA DIMENSION - Backend Overview
+
+Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebagai inti dari ekosistem AI & properti yang menggabungkan analisis gambar, geolokasi, dan generative AI. Backend ini menyediakan endpoint untuk query AI, feedback, analisis gambar dan geolokasi properti.
+
+## **Fitur Utama**
+
+### 1. AI Text Generation
+• **BytePlus AI**  
+  Model utama untuk menjawab pertanyaan terkait properti atau memberikan rekomendasi.  
+• **Gemini AI (Google Generative AI)**  
+  Digunakan sebagai fallback ketika BytePlus tidak tersedia atau gagal.  
+• **Stable Diffusion** (opsional)  
+  Digunakan untuk generate gambar atau visual aset properti berbasis AI.
+
+### 2. Analisis & Referensi Gambar Properti
+• **OpenCV + NumPy**  
+  Digunakan untuk membaca dan menganalisis gambar properti, termasuk dimensi dan channel warna.
+• **Unsplash API**  
+  Bisa digunakan untuk mengambil referensi gambar properti dari sumber online.
+
+### 3. Geolokasi Properti
+• **OpenStreetMap (OSM)**  
+  Mengubah alamat properti menjadi koordinat latitude dan longitude untuk integrasi peta atau lokasi.
+
+### 4. Data & Analisis Pasar
+• **NewsAPI**  
+  Menyediakan konteks berita atau informasi pasar properti yang relevan untuk analisis tambahan.
+
+### 5. Monitoring & Feedback
+• Endpoint **health** Memeriksa status sistem dan ketersediaan AI.  
+• Endpoint **analytics** Menyediakan statistik interaksi AI.  
+• Endpoint **feedback** Menyimpan rating dan komentar pengguna terhadap hasil AI.
+
+---
+
 ## Backend Setup (Python + FastAPI)
 
 1. Masuk ke folder backend:
