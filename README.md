@@ -45,6 +45,8 @@ Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebag
 • Endpoint **analytics** Menyediakan statistik interaksi AI.  
 • Endpoint **feedback** Menyimpan rating dan komentar pengguna terhadap hasil AI.
 
+Semua dependensi di requirements.txt diinstall agar running (FastAPI, httpx, OpenCV, NumPy, python dotenv, uvicorn).
+
 ---
 
 ## Backend Setup (Python + FastAPI)
