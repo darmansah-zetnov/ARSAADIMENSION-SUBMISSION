@@ -50,7 +50,7 @@ Backend **ARSAA DIMENSION** dibangun menggunakan **FastAPI** dan berfungsi sebag
 • Clone repository ARSAA DIMENSION.
 • Masuk ke folder backend:
 
-cd ARSAA-DIMENSION/backend
+cd ARSAADIMENSION-SUBMISSION/backend
 
 2. Buat Virtual Environment (opsional)
 
