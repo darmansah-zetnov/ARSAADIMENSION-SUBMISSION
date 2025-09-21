@@ -6,7 +6,7 @@ https://www.figma.com/make/XmtTFvvxHsKvukvb8Lmj0R/PROTOTYPE-ARSAA-V1?fullscreen=
 
 **ARSAA DIMENSION** Prototype platform real estate yang menghubungkan agen, developer, investor dan pembeli. Menggunakan **AI** untuk analisis cerdas, **AR/VR** untuk visualisasi dan **Web3** untuk transaksi transparan.
 
-Beberapa fitur lanjutan, termasuk **AR/VR untuk survei properti interaktif** dan **integrasi Web3 untuk transparansi transaksi**, masih dalam pengembangan dan akan diselesaikan pada fase berikutnya.
+Beberapa fitur lanjutan di prototype web termasuk **AR/VR untuk survei properti interaktif** dan **integrasi Web3 untuk transparansi transaksi**, masih dalam pengembangan dan akan diselesaikan pada fase berikutnya.
 
 ---
 
