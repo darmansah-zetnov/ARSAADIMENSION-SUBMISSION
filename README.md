@@ -80,8 +80,6 @@ Health check: http://127.0.0.1:8000/api/arsaa/health
 
 Analytics: http://127.0.0.1:8000/api/arsaa/analytics
 
-> Catatan: Host 0.0.0.0 memungkinkan akses dari perangkat lain di jaringan lokal.
-
 Cara Menjalankan Frontend (Node + Vite)
 
 1. Masuk Folder Frontend (Figma)
